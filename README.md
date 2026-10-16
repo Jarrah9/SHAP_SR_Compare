@@ -57,7 +57,7 @@ The full raw `Feynman_without_units/I.9.18` file is excluded to keep the reposit
 
 ### Feynman dataset
 
-Udrescu, S.-M., and Tegmark, M. (2020). *Feynman Symbolic Regression Database*. Original project/data page: [AI Feynman at MIT](https://space.mit.edu/home/tegmark/aifeynman.html). The study uses the dimensionless I.9.18 gravitational-force problem.
+Udrescu, S.-M., and Tegmark, M. (2020). *Feynman Symbolic Regression Database*. Original project/data page: [AI Feynman](https://tegmark.org/aifeynman.html). The study uses the dimensionless I.9.18 gravitational-force problem.
 
 ### Body-fat dataset
 
