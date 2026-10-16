@@ -1,16 +1,5 @@
 # Comparing SHAP Explanations and Symbolic Regression
-
-Research files accompanying Jarrah Oatham's dissertation. This folder is a curated copy of the files supporting the supplied dissertation, prepared on 16 October 2026. Existing research code, notebooks, datasets and results are copied without edits, with their relative paths preserved.
-
 The study compares SHAP explanations of Random Forest, XGBoost and MLP predictors with native PySR equations on the dimensionless Feynman I.9.18 problem and a body-fat dataset.
-
-## Start here
-
-- `docs/dissertation.pdf`: the supplied dissertation.
-- `Full_Analysis.ipynb`: the final integrated analysis, including MLP and the corrected explanation audits.
-- `docs/FILE_SELECTION.md`: the connection between the dissertation and the retained files, plus the exclusion decisions.
-- `docs/COPIED_FILES.csv`: every copied file, its source, size and SHA-256 checksum.
-- `docs/VERIFICATION.md`: checks performed on this curated copy.
 
 ## Contents
 
@@ -70,25 +59,6 @@ The full raw `Feynman_without_units/I.9.18` file is excluded to keep the reposit
 
 Udrescu, S.-M., and Tegmark, M. (2020). *Feynman Symbolic Regression Database*. Original project/data page: [AI Feynman at MIT](https://space.mit.edu/home/tegmark/aifeynman.html). The study uses the dimensionless I.9.18 gravitational-force problem.
 
-Associated paper: Udrescu, S.-M., and Tegmark, M. (2020). [AI Feynman: A physics-inspired method for symbolic regression](https://arxiv.org/abs/1905.11481). *Science Advances*, 6(16), eaay2631. The authors identify the original database URL in the paper record. The MIT data page returned HTTP 404 when checked on 16 October 2026; its link is retained as the original source reference, rather than presented as a verified working download.
-
 ### Body-fat dataset
 
 The CSV used in this study was obtained from the [Body Fat Prediction Dataset on Kaggle](https://www.kaggle.com/datasets/fedesoriano/body-fat-prediction-dataset), published by fedesoriano.
-
-Original data and measurement documentation: [StatLib body-fat dataset](https://lib.stat.cmu.edu/datasets/bodyfat), describing 252 men and data supplied by A. Garth Fisher. StatLib attributes the underlying study to K. W. Penrose, A. G. Nelson and A. G. Fisher (1985), *Generalized body composition prediction equation for men using simple measurement techniques*, *Medicine and Science in Sports and Exercise*, 17(2), 189. Kaggle identifies the version actually used; StatLib supplies the original provenance and variable definitions.
-
-## Prepare this folder for GitHub
-
-The saved Feynman Random Forest (192.20 MiB) is retained for prediction reproduction. `.gitattributes` assigns all `.joblib` predictors to Git LFS and preserves archived file bytes across checkouts. Install Git LFS before adding these files to a new repository.
-
-Run these commands from this folder when ready to create its own repository:
-
-```sh
-git init
-git lfs install --local
-git add .
-git commit -m "Add dissertation research files"
-```
-
-This folder was prepared locally; no GitHub repository or remote was created. The References section provides separate source links for both datasets; the source manifests retain their original provenance. No new licence has been assigned to the research or third-party data.
