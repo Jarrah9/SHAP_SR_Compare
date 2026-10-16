@@ -1,0 +1,267 @@
+{
+  "script": "bodyfatPySR.py",
+  "prepared_dir": "outputs/bodyfat/prepared",
+  "output_dir": "outputs/bodyfat/pysr_20260719_232448",
+  "random_state": 42,
+  "framing": "Direct symbolic regression on body-fat percentage.",
+  "selection_source": "validation split, not test set",
+  "feature_names": [
+    "Age",
+    "Weight",
+    "Height",
+    "Neck",
+    "Chest",
+    "Abdomen",
+    "Hip",
+    "Thigh",
+    "Knee",
+    "Ankle",
+    "Biceps",
+    "Forearm",
+    "Wrist",
+    "ACratio",
+    "HTratio"
+  ],
+  "representative_equations": {
+    "simplest_within_10pct_best_validation_rmse": {
+      "label": "ps33_p15_ni1000_par0.0032_adp10000",
+      "config": "{\"adaptive_parsimony_scaling\": 10000, \"niterations\": 1000, \"parsimony\": 0.0032, \"population_size\": 33, \"populations\": 15}",
+      "equation_index": 4,
+      "complexity": 6,
+      "loss": 21.540525,
+      "equation": "(square(Abdomen) + -5008.7734) / Weight",
+      "variables_used": "Weight;Abdomen",
+      "n_variables_used": 2,
+      "validation_MSE": 21.11036876647963,
+      "validation_RMSE": 4.594602133643307,
+      "validation_MAE": 3.652239263848658,
+      "validation_R2": 0.6915928480185448,
+      "MSE": 18.87065752552753,
+      "RMSE": 4.344037007845068,
+      "MAE": 3.531513176440598,
+      "R2": 0.5943370493134168
+    },
+    "best_validation_rmse": {
+      "label": "ps50_p20_ni200_par0.01_adp1000",
+      "config": "{\"adaptive_parsimony_scaling\": 1000, \"niterations\": 200, \"parsimony\": 0.01, \"population_size\": 50, \"populations\": 20}",
+      "equation_index": 8,
+      "complexity": 12,
+      "loss": 19.312294,
+      "equation": "((-272.58493 * Wrist) + square(Abdomen)) / (Weight + (Neck - Biceps))",
+      "variables_used": "Weight;Neck;Abdomen;Biceps;Wrist",
+      "n_variables_used": 5,
+      "validation_MSE": 17.695419187068747,
+      "validation_RMSE": 4.206592348572506,
+      "validation_MAE": 3.3539286007882723,
+      "validation_R2": 0.7414827805723857,
+      "MSE": 15.076777058853974,
+      "RMSE": 3.8828825708298176,
+      "MAE": 3.255706570488896,
+      "R2": 0.675894183323243
+    },
+    "best_test_rmse_descriptive": {
+      "label": "ps50_p20_ni1000_par0.01_adp500",
+      "config": "{\"adaptive_parsimony_scaling\": 500, \"niterations\": 1000, \"parsimony\": 0.01, \"population_size\": 50, \"populations\": 20}",
+      "equation_index": 15,
+      "complexity": 19,
+      "loss": 18.059813,
+      "equation": "(ACratio * (Abdomen + (Wrist + -95.60279))) - ((2.3292863 - ((Hip * 0.0011346135) * Wrist)) * (Neck - Thigh))",
+      "variables_used": "Neck;Abdomen;Hip;Thigh;Wrist;ACratio",
+      "n_variables_used": 6,
+      "validation_MSE": 21.108266269514708,
+      "validation_RMSE": 4.5943733271812714,
+      "validation_MAE": 3.409105990728308,
+      "validation_R2": 0.6916235639718364,
+      "MSE": 12.71396275211792,
+      "RMSE": 3.565664419448067,
+      "MAE": 2.9341984897979914,
+      "R2": 0.7266876557975535
+    },
+    "knee_point_tradeoff": {
+      "label": "ps50_p20_ni200_par0.05_adp1000",
+      "config": "{\"adaptive_parsimony_scaling\": 1000, \"niterations\": 200, \"parsimony\": 0.05, \"population_size\": 50, \"populations\": 20}",
+      "equation_index": 7,
+      "complexity": 9,
+      "loss": 20.293173,
+      "equation": "((Abdomen + (-53.854958 - Wrist)) * 176.48988) / Weight",
+      "variables_used": "Weight;Abdomen;Wrist",
+      "n_variables_used": 3,
+      "validation_MSE": 17.77085220247466,
+      "validation_RMSE": 4.215548861355383,
+      "validation_MAE": 3.2808228391587084,
+      "validation_R2": 0.7403807590158674,
+      "MSE": 14.80792471780348,
+      "RMSE": 3.8481066406485516,
+      "MAE": 3.220872437760096,
+      "R2": 0.6816737081660845,
+      "knee_score": 0.7313807590158674
+    }
+  },
+  "preprocessing_manifest": {
+    "data_path": "data/bodyfat/bodyfat.csv",
+    "kaggle_dataset": "fedesoriano/body-fat-prediction-dataset",
+    "kaggle_url": "https://www.kaggle.com/datasets/fedesoriano/body-fat-prediction-dataset",
+    "random_state": 42,
+    "test_size": 0.2,
+    "target_column": "BodyFat",
+    "original_columns": [
+      "Density",
+      "BodyFat",
+      "Age",
+      "Weight",
+      "Height",
+      "Neck",
+      "Chest",
+      "Abdomen",
+      "Hip",
+      "Thigh",
+      "Knee",
+      "Ankle",
+      "Biceps",
+      "Forearm",
+      "Wrist"
+    ],
+    "n_rows": 252,
+    "n_train": 201,
+    "n_test": 51,
+    "target_summary": {
+      "overall_mean": 19.150793650793652,
+      "overall_std": 8.368740413029707,
+      "train_mean": 19.43582089552239,
+      "test_mean": 18.027450980392157
+    },
+    "feature_columns": [
+      "Age",
+      "Weight",
+      "Height",
+      "Neck",
+      "Chest",
+      "Abdomen",
+      "Hip",
+      "Thigh",
+      "Knee",
+      "Ankle",
+      "Biceps",
+      "Forearm",
+      "Wrist",
+      "ACratio",
+      "HTratio"
+    ],
+    "raw_feature_columns": [
+      "Age",
+      "Weight",
+      "Height",
+      "Neck",
+      "Chest",
+      "Abdomen",
+      "Hip",
+      "Thigh",
+      "Knee",
+      "Ankle",
+      "Biceps",
+      "Forearm",
+      "Wrist"
+    ],
+    "derived_columns": {
+      "ACratio": {
+        "formula": "Abdomen / Chest",
+        "source": "Inspired by the Kaggle notebook feature engineering; retained without dropping the original measurements."
+      },
+      "HTratio": {
+        "formula": "Hip / Thigh",
+        "source": "Inspired by the Kaggle notebook feature engineering; retained without dropping the original measurements."
+      }
+    },
+    "excluded_columns": [
+      "Density"
+    ],
+    "density_handling": {
+      "column": "Density",
+      "used_as_feature": false,
+      "reason": "Density is excluded because body-fat percentage is derived from density in this dataset."
+    },
+    "imputation": {
+      "Age": {
+        "strategy": "training median",
+        "value": 44.0,
+        "fit_on": "training split only"
+      },
+      "Weight": {
+        "strategy": "training median",
+        "value": 176.0,
+        "fit_on": "training split only"
+      },
+      "Height": {
+        "strategy": "training median",
+        "value": 70.0,
+        "fit_on": "training split only"
+      },
+      "Neck": {
+        "strategy": "training median",
+        "value": 38.0,
+        "fit_on": "training split only"
+      },
+      "Chest": {
+        "strategy": "training median",
+        "value": 99.6,
+        "fit_on": "training split only"
+      },
+      "Abdomen": {
+        "strategy": "training median",
+        "value": 90.9,
+        "fit_on": "training split only"
+      },
+      "Hip": {
+        "strategy": "training median",
+        "value": 99.3,
+        "fit_on": "training split only"
+      },
+      "Thigh": {
+        "strategy": "training median",
+        "value": 59.0,
+        "fit_on": "training split only"
+      },
+      "Knee": {
+        "strategy": "training median",
+        "value": 38.4,
+        "fit_on": "training split only"
+      },
+      "Ankle": {
+        "strategy": "training median",
+        "value": 22.7,
+        "fit_on": "training split only"
+      },
+      "Biceps": {
+        "strategy": "training median",
+        "value": 31.8,
+        "fit_on": "training split only"
+      },
+      "Forearm": {
+        "strategy": "training median",
+        "value": 28.8,
+        "fit_on": "training split only"
+      },
+      "Wrist": {
+        "strategy": "training median",
+        "value": 18.3,
+        "fit_on": "training split only"
+      },
+      "ACratio": {
+        "strategy": "training median",
+        "value": 0.920767306088407,
+        "fit_on": "training split only"
+      },
+      "HTratio": {
+        "strategy": "training median",
+        "value": 1.6893382352941178,
+        "fit_on": "training split only"
+      }
+    },
+    "versions": {
+      "pandas": "3.0.3",
+      "numpy": "2.4.6",
+      "scikit_learn": "1.9.0",
+      "joblib": "1.5.3"
+    }
+  }
+}

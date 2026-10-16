@@ -1,0 +1,2 @@
+Dataset,Method,Full-preservation maximum error,Zero-deletion maximum change,All-replaced endpoint maximum discrepancy,Maximum additivity residual,Median additivity residual,Numerical endpoint floor,Normalization epsilon
+Feynman,MLP,0.0,0.0,0.0,2.220446049250313e-15,6.661338147750939e-16,1.8795861860192874e-10,3.963475539117822e-07

@@ -1,0 +1,39 @@
+{
+  "status": "completed",
+  "selected": {
+    "label": "ps100_p40_ni1000_par0.0032_adp500",
+    "population_size": 100,
+    "populations": 40,
+    "niterations": 1000,
+    "parsimony": 0.0032,
+    "adaptive_parsimony_scaling": 500,
+    "best_loss": 9.385715e-15,
+    "complexity": 17,
+    "equation": "m2_m1 / ((square(y1_x1 - y2_x1) + square(z2_x1 - z1_x1)) + square(x2_x1 - square(1.0)))",
+    "validation_mse": 3.969880875766521e-32
+  },
+  "validation_seed": 9020801,
+  "validation_n": 2000,
+  "final_seed": 9020802,
+  "final_n": 2000,
+  "tie_rule": "validation MSE <= minimum + 1e-20; then complexity, then lexical label",
+  "candidate_sha256": "eccb75eb8fd8be3ea6271b78560ab93404c4841f8ef2aabefe4d8aca5b1c77f7",
+  "candidate_source": "C:\\Users\\jarra\\OneDrive\\Documents\\Work\\UWA\\Year 4\\Research Project\\pawsey-results\\pysr_results.csv",
+  "available_configurations": 183,
+  "planned_configurations": 192,
+  "within_config_selection": "Saved minimum-training-loss equation per configuration; retained",
+  "across_config_selection": "Fresh validation MSE only; legacy test metrics excluded from ranked table",
+  "legacy_test_status": "Previously inspected and used to rank PySR configurations; historical diagnostic only, never relabelled untouched",
+  "training": "All fitted models and training-only RF/XGBoost 5-fold CV retained; no refit",
+  "sampling_design": "Independent uniform physical m1,m2,x2,y2,z2 in [1,2], x1,y1,z1 in [3,4]; form six shared-denominator ratios; direct dimensionless target",
+  "range_reference": "https://huggingface.co/spaces/MilesCranmer/PySR/blob/6e2fc47a46ef3c644c333a73d17fcc4b5d9c115f/datasets/FeynmanEquations.csv",
+  "limitation": "183 completed configurations available out of 192 planned; correction covers this frozen snapshot. New synthetic sampling design, not the original held-out rows.",
+  "source_sha256": {
+    "feynmanPySR.py": "185af77fef042a82a4500e1ff357339dc7a96621552da98e519aaace27c5cdc9",
+    "feynmanRF.py": "115e984b76afc1d06a080f7afb0adda6e2db7845c1e3c42c53ecb5dddc83aa3f",
+    "feynmanXGBoost.py": "ab1e56ad2ad66bfcc5e85f030938fafb6933b7e170108410e1380bca6c3651e4",
+    "outputs/best_models/training_manifest.json": "ade356d4c4f18f1324cbb2e6f999a4b45c0293e9c52d6e1e6a530eac6acb7f02",
+    "outputs/best_models/random_forest_best.joblib": "da88eb0d06c2c0c175ae532136a3832b5c35fda4d4dad858cbca35987bbb9457",
+    "outputs/best_models/xgboost_best.joblib": "c03d29dbf214295daf44607ff2b8cc0089cc5527df0ba94008014363c105aab2"
+  }
+}

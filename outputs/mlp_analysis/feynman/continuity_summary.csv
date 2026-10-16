@@ -1,0 +1,3 @@
+Method,Noise (% training SD),Explanation subjects,Perturbation repeats,Candidate explanation pairs,Retained explanation pairs,Retained proportion,Response-stability threshold (target units),Mean cosine similarity,Repeat-mean cosine 2.5%,Repeat-mean cosine 97.5%,Mean absolute attribution distance,Repeat-mean attribution distance 2.5%,Repeat-mean attribution distance 97.5%,Both-zero vector pairs,One-zero vector pairs
+MLP,2.5,50,20,1000,917,0.917,0.01984998523145561,0.9993607491358694,0.9989784816989065,0.9995452754372744,0.00318585628931114,0.003012296638427677,0.0033925617601921277,0,0
+MLP,5.0,50,20,1000,626,0.626,0.01984998523145561,0.998018385537161,0.9973772891667982,0.998606578733371,0.0058079221907355715,0.005409129327859189,0.006244454004310448,0,0

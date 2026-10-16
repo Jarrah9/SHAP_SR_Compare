@@ -1,0 +1,4 @@
+Method,Attribution coverage,Observations,Zero-total observations,Mean features,Median features,Q1,Q3,IQR,Minimum,Maximum
+MLP,80%,51,0,4.450980392156863,5.0,4.0,5.0,1.0,2,7
+MLP,90%,51,0,6.431372549019608,7.0,6.0,7.0,1.0,3,9
+MLP,95%,51,0,8.196078431372548,8.0,7.5,9.0,1.5,5,10

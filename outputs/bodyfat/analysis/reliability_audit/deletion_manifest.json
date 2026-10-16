@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "final_budget": 201,
+  "sampling": "all training donors exactly once per subject-feature-model; uniform empirical expectation",
+  "draws_paired_across_models": true,
+  "random_budget_check_seeds": [
+    42,
+    1729,
+    2026
+  ],
+  "random_budgets": [
+    20,
+    50,
+    100,
+    200,
+    500,
+    1000
+  ],
+  "impact": "mean_d abs(f(x with raw feature j from training donor d)-f(x)); derived ratios recomputed",
+  "ties": "Spearman average ranks; constant vectors yield NaN; fractional top-three boundary membership, plus feature-order sensitivity",
+  "limitations": "Single-feature replacements can create unrealistic combinations; interactions differ from SHAP coalition averaging; descriptive faithfulness evidence, not causal or population inference"
+}

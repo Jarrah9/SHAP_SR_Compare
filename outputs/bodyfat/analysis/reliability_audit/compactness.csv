@@ -1,0 +1,7 @@
+Method,Attribution coverage,Observations,Zero-total observations,Mean features,Median features,Q1,Q3,IQR,Minimum,Maximum
+Random Forest,80%,51,0,3.9607843137254903,4.0,3.0,5.0,2.0,1,8
+Random Forest,90%,51,0,6.352941176470588,6.0,5.0,7.0,2.0,3,10
+Random Forest,95%,51,0,8.333333333333334,8.0,8.0,9.0,1.0,5,11
+XGBoost,80%,51,0,4.117647058823529,4.0,4.0,5.0,1.0,1,6
+XGBoost,90%,51,0,5.9411764705882355,6.0,5.0,7.0,2.0,3,8
+XGBoost,95%,51,0,7.8431372549019605,8.0,7.0,9.0,2.0,4,10

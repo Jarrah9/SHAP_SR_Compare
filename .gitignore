@@ -1,0 +1,25 @@
+# Local environments and generated caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary work, console logs and disposable search checkpoints
+/tmp/
+/temp/
+*.log
+*.tmp
+*.bak
+checkpoint.pkl
+
+# The full raw Feynman file is obtained separately; keep the exact small sample.
+/Feynman_without_units/I.9.18
+
+# Saved analysis datasets, models, tables and figures are intentionally included.

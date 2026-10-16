@@ -1,0 +1,2 @@
+model,cv_best_neg_mse,oob_score,train_mse,train_rmse,train_mae,train_r2,test_mse,test_rmse,test_mae,test_r2,max_depth,max_features,min_samples_leaf,min_samples_split,n_estimators
+Random Forest,-24.38942501086874,0.6887374855213524,6.200387666977666,2.4900577637833354,2.0209855319651933,0.9176062649646501,17.060778527766182,4.130469528729898,3.440410204837458,0.6332440589724255,8,0.5,2,6,419

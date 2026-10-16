@@ -1,0 +1,4 @@
+Dataset,Rows,N,Maximum prediction difference
+Feynman,Historical test,2000,4.440892098500626e-16
+Feynman,Fresh final,2000,1.3322676295501878e-15
+Body fat,Historical test,51,3.552713678800501e-15

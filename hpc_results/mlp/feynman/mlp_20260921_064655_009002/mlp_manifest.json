@@ -1,0 +1,96 @@
+{
+  "status": "completed",
+  "model_family": "shallow MLP regressor",
+  "is_mock": false,
+  "script": "feynmanMLP.py",
+  "dataset": "feynman",
+  "created_utc": "2026-09-21T06:46:55.011816+00:00",
+  "output_dir": "/scratch/pawsey0411/joatham/SR-XAI-Comparison/outputs/feynman/mlp_20260921_064655_009002",
+  "arguments": {
+    "data_path": "/scratch/pawsey0411/joatham/SR-XAI-Comparison/Feynman_without_units/I.9.18_sample_10000",
+    "output_dir": null,
+    "solver": "adam",
+    "hidden_units": [
+      16,
+      32,
+      64
+    ],
+    "search_iterations": 60,
+    "cv_folds": 5,
+    "max_iter": 2000,
+    "max_fun": 50000,
+    "seed": 42,
+    "validation_seeds": [
+      42,
+      1729,
+      2026
+    ],
+    "n_jobs": null,
+    "skip_grid": false
+  },
+  "random_state": 42,
+  "feature_names": [
+    "m2_m1",
+    "x2_x1",
+    "y1_x1",
+    "y2_x1",
+    "z1_x1",
+    "z2_x1"
+  ],
+  "n_train": 8000,
+  "n_test": 2000,
+  "data": {
+    "data_path": "/scratch/pawsey0411/joatham/SR-XAI-Comparison/Feynman_without_units/I.9.18_sample_10000",
+    "split_random_state": 42,
+    "test_size": 0.2,
+    "n_rows": 10000,
+    "input_contract": "The same six ordered dimensionless inputs as feynmanRF.py and feynmanXGBoost.py."
+  },
+  "n_jobs": 36,
+  "threads_per_fit": 1,
+  "cv": {
+    "folds": 5,
+    "shuffle": false,
+    "scoring": "neg_mean_squared_error",
+    "units": "original target units",
+    "selection": "training folds only"
+  },
+  "preprocessing": "Fold-fitted StandardScaler for X and y; predict() returns original target units.",
+  "seed_validation": "Fixed best hyperparameters; training-only CV diagnostics, not independent performance estimates or seed selection.",
+  "final_model_selection": "Best CV hyperparameters fitted with the requested --seed; test set never selects settings or stopping.",
+  "input_sha256": {
+    "/scratch/pawsey0411/joatham/SR-XAI-Comparison/Feynman_without_units/I.9.18_sample_10000": "d655d0c211ed0a3859e142473a1b37e94e4b047ae506d54b3ce21d8d8741ec43",
+    "/scratch/pawsey0411/joatham/SR-XAI-Comparison/feynmanMLP.py": "514949b1178a82c0b8a538c4e1f23c1d74d50bafde55a4df81f983f8b3c15aa9",
+    "/scratch/pawsey0411/joatham/SR-XAI-Comparison/mlp_common.py": "767a4839b660df48297ff03f841a09db7e87731376f5ad027e05fc177b0ca381"
+  },
+  "slurm": {
+    "SLURM_JOB_ID": "49785719",
+    "SLURM_CPUS_PER_TASK": "36",
+    "SLURM_JOB_NODELIST": "nid001012"
+  },
+  "versions": {
+    "python": "3.11.6",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "scipy": "1.17.1",
+    "scikit_learn": "1.8.0",
+    "joblib": "1.5.3"
+  },
+  "best_params": {
+    "regressor__mlp__activation": "tanh",
+    "regressor__mlp__alpha": 0.0017429779056934796,
+    "regressor__mlp__hidden_layer_sizes": [
+      64
+    ],
+    "regressor__mlp__learning_rate_init": 0.004274869455295219
+  },
+  "cv_best_neg_mse": -2.15641807926602e-05,
+  "model_artifact": "mlp_best.joblib",
+  "final_fit": {
+    "n_iter": 185,
+    "scaled_loss": 9.28226205727094e-05,
+    "convergence_warnings": [],
+    "parameter_count": 513
+  },
+  "elapsed_seconds": 53.65664446912706
+}

@@ -1,0 +1,4 @@
+Method,Average features for 90% |SHAP|,Direct representation snapshot (not comparable)
+Random Forest,6.372549019607843,419 trees; 14741 total leaves
+XGBoost,6.0,77 trees; 296 total leaves
+PySR,2.843137254901961,equation complexity 12; 5 variables

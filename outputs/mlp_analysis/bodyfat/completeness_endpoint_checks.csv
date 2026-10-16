@@ -1,0 +1,2 @@
+Dataset,Method,Full-preservation maximum error,Zero-deletion maximum change,All-replaced endpoint maximum discrepancy,Maximum additivity residual,Median additivity residual,Numerical endpoint floor,Normalization epsilon
+Body fat,MLP,6.8212102632969615e-15,6.8212102632969615e-15,0.0,1.7763568394002505e-13,6.394884621840902e-14,3.855562586082662e-09,7.122101323886581e-06

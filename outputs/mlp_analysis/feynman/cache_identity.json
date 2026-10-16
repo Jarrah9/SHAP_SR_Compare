@@ -1,0 +1,35 @@
+{
+  "protocol_version": "1.0.0",
+  "dataset": "feynman",
+  "models": [
+    "MLP"
+  ],
+  "algorithm": "exact",
+  "background_rows": 50,
+  "background_seed": 42,
+  "link": "identity",
+  "source_sha256": {
+    "hpc_results/mlp/feynman/mlp_20260921_064655_009002/mlp_best.joblib": "3569dd4e921f0fb1cb8bfb686dbfb055533404e934302096e60e7824a4d907c2",
+    "hpc_results/mlp/feynman/mlp_20260921_064655_009002/mlp_manifest.json": "0e7f984b14d41d02d6856fc88cdf35d00a9afbb5d6643219e2e8853c5d34342b",
+    "hpc_results/mlp/feynman/mlp_20260921_064655_009002/mlp_metrics.csv": "602de2a5641752d0e404e630199fdeed47925c2edd9db2f66242a13aae6a5c7a",
+    "hpc_results/mlp/feynman/mlp_20260921_064655_009002/mlp_test_predictions.csv": "fdd04e282a758569ffb20081e5c467489406c084a95acfdf60b2c07cce679626",
+    "hpc_results/mlp/feynman/mlp_20260921_064655_009002/mlp_seed_validation.csv": "dc2d7c4af1a1b36964a560bc6dfa5c9fcad9190706daa170fc25d2b0ebdfc374",
+    "scripts/mlp_analysis.py": "57ab0a226fba7e86f5a62053fabc12c90f70a84addfdc402f85496a484894152",
+    "scripts/explanation_metrics.py": "1931650d5e938a9e94fc652e43c7b161fa982c7ed2ff5b13f538178648589025",
+    "scripts/bodyfat_continuity_audit.py": "7ac2b9dbc12ca586b53faaf84e6ba7b40c3f7292c2f31d133b54f52a1fceeef9",
+    "scripts/feynman_continuity_audit.py": "894c66e116bc9bca1d12871b678e34f02a71c794a61df404fe326331d4ac6f74",
+    "outputs/best_models/selection_audit/continuity_manifest.json": "4af0709c4d20a6da90b71e494f68fbdcec25f7c15c2627dd2a95ed1e97016dc0",
+    "outputs/best_models/selection_audit/completeness_design.npz": "0920a80cbeb537bb0c0e1bf8ae1d6e4513a557df8d71417bd003cfcd4487b452",
+    "outputs/best_models/selection_audit/completeness_manifest.json": "bc123396d81a0e4fa99b95876ac7dfeef40110bdb0769659f8daa42135849c45",
+    "Feynman_without_units/I.9.18_sample_10000": "d655d0c211ed0a3859e142473a1b37e94e4b047ae506d54b3ce21d8d8741ec43",
+    "outputs/best_models/training_manifest.json": "b7231dae37dfa06e1f9d9221a4f43945208328d1c4b6212196ffc4499fd3aace",
+    "outputs/best_models/selection_audit/final_rows.csv": "19e9bc94724d954194b283b3d6207fcd7a780439dc9afaf37fc77458b8d66c90",
+    "outputs/best_models/selection_audit/local_faithfulness.npz": "aa2bff123d143278753273baba6df5f71269e978254d89b4c89df8fec1cfcd2c"
+  },
+  "versions": {
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "sklearn": "1.8.0",
+    "shap": "0.51.0"
+  }
+}

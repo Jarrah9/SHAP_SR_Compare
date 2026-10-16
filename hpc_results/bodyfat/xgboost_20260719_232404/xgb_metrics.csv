@@ -1,0 +1,2 @@
+model,cv_best_neg_mse,train_mse,train_rmse,train_mae,train_r2,test_mse,test_rmse,test_mae,test_r2,colsample_bytree,gamma,learning_rate,max_depth,min_child_weight,n_estimators,reg_alpha,reg_lambda,subsample
+XGBoost,-23.103873167802398,10.813700021749174,3.2884190763570835,2.6543747299346165,0.8563023504015741,16.986101012793775,4.121419781191158,3.517165872162464,0.6348494031970593,0.9145,1.051,0.0818,2,6,77,0.2431,4.5763,0.6829

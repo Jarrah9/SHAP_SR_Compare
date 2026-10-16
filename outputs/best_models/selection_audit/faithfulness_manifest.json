@@ -1,0 +1,19 @@
+{
+  "status": "completed",
+  "subset_seed": 9020803,
+  "n": 50,
+  "seeds": [
+    42,
+    1729,
+    2026
+  ],
+  "budgets": [
+    64,
+    256,
+    1024
+  ],
+  "final_estimate": "mean of 3 independent 1024-donor estimates; paired donors across models",
+  "explanation": "TreeSHAP tree_path_dependent; training path counts as background; identity link",
+  "comparison": "absolute TreeSHAP vs changes to the fitted model, separate from generating-equation alignment",
+  "limitations": "Compact sample only; empirical marginal replacement can violate ratio dependencies and differ from path-dependent SHAP conditioning"
+}

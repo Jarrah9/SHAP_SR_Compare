@@ -1,0 +1,45 @@
+{
+  "status": "completed",
+  "protocol_version": "1.0.0",
+  "dataset": "Body fat",
+  "models": [
+    "Random Forest",
+    "XGBoost"
+  ],
+  "n_evaluation_rows": 51,
+  "n_features": 13,
+  "target_unit": "body-fat percentage points",
+  "local_ranking": "Descending absolute SHAP magnitude; stable feature-order ties",
+  "shap_source": "outputs/bodyfat/analysis/reliability_audit/shap_values.npz; exact 8,192-coalition SHAP over the fixed 50-row training background",
+  "preservation": "Keep top-k observed raw/model input features; replace remainder from one complete donor row; compare with original full-input prediction using mean absolute error",
+  "deletion": "Replace top-k observed raw/model input features from the same donor row; compare with original full-input prediction using mean absolute change",
+  "donor_protocol": "All 50 fixed SHAP-background rows enumerated once per explained row and subset; paired across models and checks",
+  "paired_across_models": true,
+  "same_donor_row_for_all_replaced_features_within_trial": true,
+  "donors_per_observation": 50,
+  "random_orders": 32,
+  "random_order_seed": 314160,
+  "coverage_subset": "Smallest local prefix with cumulative absolute SHAP >= 90%; not interpreted as 90% prediction recovery",
+  "reconstruction_tolerance": "5% of each fitted model's population SD of predictions over its training split, with numerical floor",
+  "reconstruction_count": "Smallest k within tolerance at k and every larger k; first crossing also saved because curves may be non-monotonic",
+  "normalization": "Divide each subject curve by its mean absolute prediction change when all features are replaced",
+  "near_zero_denominator": "Undefined when denominator <= max(1e-12, 1e-6 * model training-prediction SD); raw-unit metrics retained",
+  "non_monotonicity": "No monotonic smoothing or clipping; per-subject direction-reversal steps saved and summarized",
+  "additivity": "Numerically checked for all explained rows; validation of attribution arithmetic only, not evidence that SHAP exposes the model's entire internal reasoning",
+  "replacement_assumption": "Empirical marginal/hybrid intervention without retraining. A whole donor row preserves dependence inside the replaced block, but dependence between retained and replaced blocks can still be broken.",
+  "outputs": [
+    "completeness_curves.csv",
+    "completeness_subjects.csv",
+    "completeness_summary.csv",
+    "completeness_endpoint_checks.csv",
+    "completeness_design.npz",
+    "completeness_curves.png"
+  ],
+  "source_sha256": {
+    "outputs/bodyfat/analysis/reliability_audit/shap_values.npz": "fe3b72af158bed2c56140e857909b688f5624559173e401dae89797dbcd89831",
+    "hpc_results/bodyfat/prepared/train_raw_split.csv": "6b101d2b46649c58c74fdc2c34d4068c1e976241f1088210aa4356a25ae00416",
+    "hpc_results/bodyfat/prepared/test_raw_split.csv": "01c169c0a840292cc8c64dd03e2b172a310e594300e20b453936cf33e6da9177",
+    "hpc_results/bodyfat/random_forest_20260719_232404/rf_best.joblib": "d320aa77c72171ee33322f9b7e06afee84efbefcd23a9d18fd46c108a0233186",
+    "hpc_results/bodyfat/xgboost_20260719_232404/xgb_best.joblib": "74818293a512ec1d4595b456ca36eaab3f60877583709469a3db1e27a5b22b33"
+  }
+}

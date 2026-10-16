@@ -1,0 +1,3 @@
+Method,Noise (% training SD),Evaluated rows,All raw inputs finite,Rows outside training ranges
+MLP,2.5,200000,True,343
+MLP,5.0,200000,True,792

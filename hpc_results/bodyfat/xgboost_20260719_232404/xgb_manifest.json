@@ -1,0 +1,207 @@
+{
+  "script": "bodyfatXGBoost.py",
+  "prepared_dir": "outputs/bodyfat/prepared",
+  "output_dir": "outputs/bodyfat/xgboost_20260719_232404",
+  "random_state": 42,
+  "scoring": "neg_mean_squared_error",
+  "best_params": {
+    "colsample_bytree": 0.9145,
+    "gamma": 1.051,
+    "learning_rate": 0.0818,
+    "max_depth": 2,
+    "min_child_weight": 6,
+    "n_estimators": 77,
+    "reg_alpha": 0.2431,
+    "reg_lambda": 4.5763,
+    "subsample": 0.6829
+  },
+  "feature_names": [
+    "Age",
+    "Weight",
+    "Height",
+    "Neck",
+    "Chest",
+    "Abdomen",
+    "Hip",
+    "Thigh",
+    "Knee",
+    "Ankle",
+    "Biceps",
+    "Forearm",
+    "Wrist",
+    "ACratio",
+    "HTratio"
+  ],
+  "preprocessing_manifest": {
+    "data_path": "data/bodyfat/bodyfat.csv",
+    "kaggle_dataset": "fedesoriano/body-fat-prediction-dataset",
+    "kaggle_url": "https://www.kaggle.com/datasets/fedesoriano/body-fat-prediction-dataset",
+    "random_state": 42,
+    "test_size": 0.2,
+    "target_column": "BodyFat",
+    "original_columns": [
+      "Density",
+      "BodyFat",
+      "Age",
+      "Weight",
+      "Height",
+      "Neck",
+      "Chest",
+      "Abdomen",
+      "Hip",
+      "Thigh",
+      "Knee",
+      "Ankle",
+      "Biceps",
+      "Forearm",
+      "Wrist"
+    ],
+    "n_rows": 252,
+    "n_train": 201,
+    "n_test": 51,
+    "target_summary": {
+      "overall_mean": 19.150793650793652,
+      "overall_std": 8.368740413029707,
+      "train_mean": 19.43582089552239,
+      "test_mean": 18.027450980392157
+    },
+    "feature_columns": [
+      "Age",
+      "Weight",
+      "Height",
+      "Neck",
+      "Chest",
+      "Abdomen",
+      "Hip",
+      "Thigh",
+      "Knee",
+      "Ankle",
+      "Biceps",
+      "Forearm",
+      "Wrist",
+      "ACratio",
+      "HTratio"
+    ],
+    "raw_feature_columns": [
+      "Age",
+      "Weight",
+      "Height",
+      "Neck",
+      "Chest",
+      "Abdomen",
+      "Hip",
+      "Thigh",
+      "Knee",
+      "Ankle",
+      "Biceps",
+      "Forearm",
+      "Wrist"
+    ],
+    "derived_columns": {
+      "ACratio": {
+        "formula": "Abdomen / Chest",
+        "source": "Inspired by the Kaggle notebook feature engineering; retained without dropping the original measurements."
+      },
+      "HTratio": {
+        "formula": "Hip / Thigh",
+        "source": "Inspired by the Kaggle notebook feature engineering; retained without dropping the original measurements."
+      }
+    },
+    "excluded_columns": [
+      "Density"
+    ],
+    "density_handling": {
+      "column": "Density",
+      "used_as_feature": false,
+      "reason": "Density is excluded because body-fat percentage is derived from density in this dataset."
+    },
+    "imputation": {
+      "Age": {
+        "strategy": "training median",
+        "value": 44.0,
+        "fit_on": "training split only"
+      },
+      "Weight": {
+        "strategy": "training median",
+        "value": 176.0,
+        "fit_on": "training split only"
+      },
+      "Height": {
+        "strategy": "training median",
+        "value": 70.0,
+        "fit_on": "training split only"
+      },
+      "Neck": {
+        "strategy": "training median",
+        "value": 38.0,
+        "fit_on": "training split only"
+      },
+      "Chest": {
+        "strategy": "training median",
+        "value": 99.6,
+        "fit_on": "training split only"
+      },
+      "Abdomen": {
+        "strategy": "training median",
+        "value": 90.9,
+        "fit_on": "training split only"
+      },
+      "Hip": {
+        "strategy": "training median",
+        "value": 99.3,
+        "fit_on": "training split only"
+      },
+      "Thigh": {
+        "strategy": "training median",
+        "value": 59.0,
+        "fit_on": "training split only"
+      },
+      "Knee": {
+        "strategy": "training median",
+        "value": 38.4,
+        "fit_on": "training split only"
+      },
+      "Ankle": {
+        "strategy": "training median",
+        "value": 22.7,
+        "fit_on": "training split only"
+      },
+      "Biceps": {
+        "strategy": "training median",
+        "value": 31.8,
+        "fit_on": "training split only"
+      },
+      "Forearm": {
+        "strategy": "training median",
+        "value": 28.8,
+        "fit_on": "training split only"
+      },
+      "Wrist": {
+        "strategy": "training median",
+        "value": 18.3,
+        "fit_on": "training split only"
+      },
+      "ACratio": {
+        "strategy": "training median",
+        "value": 0.920767306088407,
+        "fit_on": "training split only"
+      },
+      "HTratio": {
+        "strategy": "training median",
+        "value": 1.6893382352941178,
+        "fit_on": "training split only"
+      }
+    },
+    "versions": {
+      "pandas": "3.0.3",
+      "numpy": "2.4.6",
+      "scikit_learn": "1.9.0",
+      "joblib": "1.5.3"
+    }
+  },
+  "versions": {
+    "scikit_learn": "1.9.0",
+    "xgboost": "3.2.0",
+    "shap": "0.51.0"
+  }
+}

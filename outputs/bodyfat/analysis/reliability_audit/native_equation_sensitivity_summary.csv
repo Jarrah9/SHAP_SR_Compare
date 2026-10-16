@@ -1,0 +1,3 @@
+Method,Noise (% training SD),Equation subjects,Perturbation repeats,Candidate equation-input pairs,Response-stable pairs,Response-stable proportion,Mean absolute prediction change,Repeat-mean prediction change 2.5%,Repeat-mean prediction change 97.5%,Native equation structurally unchanged
+PySR,2.5,12,10,120,105,0.875,0.2297317919755605,0.17280858888722112,0.3348369169847304,True
+PySR,5.0,12,10,120,65,0.5416666666666666,0.4596375745793697,0.3454671392606561,0.6696645941865069,True

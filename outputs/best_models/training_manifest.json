@@ -1,0 +1,58 @@
+{
+  "data_path": "Feynman_without_units\\I.9.18_sample_10000",
+  "random_state": 42,
+  "test_size": 0.2,
+  "feature_columns": [
+    "m2_m1",
+    "x2_x1",
+    "y1_x1",
+    "y2_x1",
+    "z1_x1",
+    "z2_x1"
+  ],
+  "rf_params": {
+    "n_estimators": 277,
+    "max_depth": 20,
+    "max_features": 1.0,
+    "min_samples_leaf": 1,
+    "min_samples_split": 2
+  },
+  "xgb_params": {
+    "n_estimators": 603,
+    "max_depth": 4,
+    "learning_rate": 0.1189,
+    "subsample": 0.6407,
+    "colsample_bytree": 0.6135,
+    "min_child_weight": 13,
+    "reg_alpha": 0.5058,
+    "reg_lambda": 1.5675
+  },
+  "pysr_result": {
+    "label": "ps200_p80_ni1000_par0.001_adp1000",
+    "population_size": 200,
+    "populations": 80,
+    "niterations": 1000,
+    "parsimony": 0.001,
+    "adaptive_parsimony_scaling": 1000,
+    "complexity": 17,
+    "best_loss": 9.297229e-15,
+    "test_mse": 4.918208780382796e-31,
+    "r2": 1.0,
+    "raw_equation": "m2_m1 / ((square(y1_x1 - y2_x1) + square(x2_x1 - square(1.0))) + square(z2_x1 - z1_x1))",
+    "simplified_equation": "m2_m1 / ((x2_x1 - 1)**2 + (y2_x1 - y1_x1)**2 + (z2_x1 - z1_x1)**2)"
+  },
+  "continuity_method": "Paired Gaussian perturbations without clipping; TreeSHAP cosine similarity reported for response-stable rows",
+  "response_stability_tolerance": 0.01984998523145561,
+  "noise_levels": [
+    0.0,
+    0.025,
+    0.05
+  ],
+  "noise_repeats": 100,
+  "continuity_repeats": 20,
+  "continuity_sample_size": 50,
+  "versions": {
+    "scikit_learn": "1.8.0",
+    "xgboost": "3.2.0"
+  }
+}

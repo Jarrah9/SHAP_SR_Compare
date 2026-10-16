@@ -1,0 +1,101 @@
+Method,source_row_index,Cosine similarity,Mean absolute attribution distance,Both attribution vectors zero,Exactly one attribution vector zero
+Random Forest,3399,1.0,0.0,False,False
+Random Forest,9417,0.9999999999999999,0.0,False,False
+Random Forest,8020,0.9999999999999999,0.0,False,False
+Random Forest,360,0.9999999999999998,0.0,False,False
+Random Forest,5703,0.9999999999999999,0.0,False,False
+Random Forest,5440,1.0,0.0,False,False
+Random Forest,9420,0.9999999999999998,0.0,False,False
+Random Forest,7753,1.0,0.0,False,False
+Random Forest,3412,1.0,0.0,False,False
+Random Forest,5403,1.0,0.0,False,False
+Random Forest,568,0.9999999999999999,0.0,False,False
+Random Forest,2586,0.9999999999999999,0.0,False,False
+Random Forest,6482,0.9999999999999999,0.0,False,False
+Random Forest,7471,1.0,0.0,False,False
+Random Forest,3519,1.0,0.0,False,False
+Random Forest,2818,1.0,0.0,False,False
+Random Forest,6202,1.0,0.0,False,False
+Random Forest,7415,1.0,0.0,False,False
+Random Forest,169,1.0,0.0,False,False
+Random Forest,7077,1.0,0.0,False,False
+Random Forest,8279,1.0,0.0,False,False
+Random Forest,8771,1.0,0.0,False,False
+Random Forest,6746,0.9999999999999998,0.0,False,False
+Random Forest,5454,1.0,0.0,False,False
+Random Forest,4870,1.0,0.0,False,False
+Random Forest,4450,1.0,0.0,False,False
+Random Forest,9525,1.0,0.0,False,False
+Random Forest,3555,1.0,0.0,False,False
+Random Forest,2335,0.9999999999999998,0.0,False,False
+Random Forest,9785,1.0,0.0,False,False
+Random Forest,212,1.0,0.0,False,False
+Random Forest,1263,1.0,0.0,False,False
+Random Forest,6271,1.0,0.0,False,False
+Random Forest,379,1.0,0.0,False,False
+Random Forest,8084,1.0,0.0,False,False
+Random Forest,1109,1.0,0.0,False,False
+Random Forest,6157,1.0,0.0,False,False
+Random Forest,4506,0.9999999999999999,0.0,False,False
+Random Forest,9499,0.9999999999999998,0.0,False,False
+Random Forest,6571,1.0,0.0,False,False
+Random Forest,3132,1.0,0.0,False,False
+Random Forest,6751,1.0,0.0,False,False
+Random Forest,7958,1.0,0.0,False,False
+Random Forest,3148,1.0,0.0,False,False
+Random Forest,6473,1.0,0.0,False,False
+Random Forest,4229,1.0,0.0,False,False
+Random Forest,9548,1.0,0.0,False,False
+Random Forest,5613,1.0,0.0,False,False
+Random Forest,5155,0.9999999999999999,0.0,False,False
+Random Forest,7722,1.0,0.0,False,False
+XGBoost,3399,1.0,0.0,False,False
+XGBoost,9417,1.0,0.0,False,False
+XGBoost,8020,0.9999999999999998,0.0,False,False
+XGBoost,360,1.0,0.0,False,False
+XGBoost,5703,1.0,0.0,False,False
+XGBoost,5440,1.0,0.0,False,False
+XGBoost,9420,1.0,0.0,False,False
+XGBoost,7753,1.0,0.0,False,False
+XGBoost,3412,1.0,0.0,False,False
+XGBoost,5403,0.9999999999999999,0.0,False,False
+XGBoost,568,1.0,0.0,False,False
+XGBoost,2586,1.0,0.0,False,False
+XGBoost,6482,1.0,0.0,False,False
+XGBoost,7471,1.0,0.0,False,False
+XGBoost,3519,1.0,0.0,False,False
+XGBoost,2818,1.0,0.0,False,False
+XGBoost,6202,1.0,0.0,False,False
+XGBoost,7415,1.0,0.0,False,False
+XGBoost,169,1.0,0.0,False,False
+XGBoost,7077,1.0,0.0,False,False
+XGBoost,8279,0.9999999999999999,0.0,False,False
+XGBoost,8771,1.0,0.0,False,False
+XGBoost,6746,1.0,0.0,False,False
+XGBoost,5454,1.0,0.0,False,False
+XGBoost,4870,1.0,0.0,False,False
+XGBoost,4450,0.9999999999999999,0.0,False,False
+XGBoost,9525,1.0,0.0,False,False
+XGBoost,3555,1.0,0.0,False,False
+XGBoost,2335,0.9999999999999999,0.0,False,False
+XGBoost,9785,1.0,0.0,False,False
+XGBoost,212,1.0,0.0,False,False
+XGBoost,1263,1.0,0.0,False,False
+XGBoost,6271,1.0,0.0,False,False
+XGBoost,379,1.0,0.0,False,False
+XGBoost,8084,1.0,0.0,False,False
+XGBoost,1109,1.0,0.0,False,False
+XGBoost,6157,1.0,0.0,False,False
+XGBoost,4506,1.0,0.0,False,False
+XGBoost,9499,1.0,0.0,False,False
+XGBoost,6571,1.0,0.0,False,False
+XGBoost,3132,1.0,0.0,False,False
+XGBoost,6751,1.0,0.0,False,False
+XGBoost,7958,1.0,0.0,False,False
+XGBoost,3148,1.0,0.0,False,False
+XGBoost,6473,1.0,0.0,False,False
+XGBoost,4229,1.0,0.0,False,False
+XGBoost,9548,1.0,0.0,False,False
+XGBoost,5613,1.0,0.0,False,False
+XGBoost,5155,1.0,0.0,False,False
+XGBoost,7722,1.0,0.0,False,False

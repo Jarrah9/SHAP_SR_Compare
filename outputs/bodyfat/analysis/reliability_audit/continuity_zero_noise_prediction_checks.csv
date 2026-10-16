@@ -1,0 +1,4 @@
+Method,Rows,Maximum zero-noise prediction change,Exact zero-noise check
+Random Forest,51,0.0,True
+XGBoost,51,0.0,True
+PySR,51,0.0,True

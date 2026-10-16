@@ -1,0 +1,15 @@
+Method,Feature count,Observations,Percent of observations,Zero-total category
+Random Forest,3,54,2.7,False
+Random Forest,4,640,32.0,False
+Random Forest,5,1204,60.2,False
+Random Forest,6,102,5.1,False
+XGBoost,2,4,0.2,False
+XGBoost,3,91,4.55,False
+XGBoost,4,807,40.35,False
+XGBoost,5,1051,52.55,False
+XGBoost,6,47,2.35,False
+MLP,2,3,0.15,False
+MLP,3,105,5.25,False
+MLP,4,795,39.75,False
+MLP,5,1045,52.25,False
+MLP,6,52,2.6,False

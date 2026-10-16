@@ -1,0 +1,6 @@
+Method,Feature count,Observations,Percent of observations,Zero-total category
+MLP,2,3,0.15,False
+MLP,3,105,5.25,False
+MLP,4,795,39.75,False
+MLP,5,1045,52.25,False
+MLP,6,52,2.6,False

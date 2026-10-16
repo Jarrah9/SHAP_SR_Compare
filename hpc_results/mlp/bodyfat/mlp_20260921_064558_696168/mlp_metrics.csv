@@ -1,0 +1,2 @@
+model,cv_best_neg_mse,train_mse,train_rmse,train_mae,train_r2,test_mse,test_rmse,test_mae,test_r2,solver,random_state,n_iter,convergence_warning,activation,alpha,hidden_layer_sizes
+Shallow MLP,-22.18351766746195,18.318845748833432,4.280052073145073,3.5064054173809933,0.7565703623950094,13.96440791204574,3.7368981672030803,3.1104271639771173,0.6998068079753791,lbfgs,42,100,False,tanh,11.81771587990087,"(8,)"

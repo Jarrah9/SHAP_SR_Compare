@@ -1,0 +1,6 @@
+# Keep archived data and source hashes stable across checkouts.
+* -text
+*.sh text eol=lf
+
+# Saved predictors use Git LFS.
+*.joblib filter=lfs diff=lfs merge=lfs -text

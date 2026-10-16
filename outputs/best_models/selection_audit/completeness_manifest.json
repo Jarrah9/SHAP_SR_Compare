@@ -1,0 +1,44 @@
+{
+  "status": "completed",
+  "protocol_version": "1.0.0",
+  "dataset": "Feynman",
+  "models": [
+    "Random Forest",
+    "XGBoost"
+  ],
+  "n_evaluation_rows": 50,
+  "n_features": 6,
+  "target_unit": "dimensionless target units",
+  "local_ranking": "Descending absolute SHAP magnitude; stable feature-order ties",
+  "shap_source": "outputs/best_models/selection_audit/local_faithfulness.npz; TreeSHAP on 50 input-only-selected fresh-final rows",
+  "preservation": "Keep top-k observed raw/model input features; replace remainder from one complete donor row; compare with original full-input prediction using mean absolute error",
+  "deletion": "Replace top-k observed raw/model input features from the same donor row; compare with original full-input prediction using mean absolute change",
+  "donor_protocol": "512 paired whole-row draws with replacement per explained row from the reconstructed 8,000-row training split; seed 9020810",
+  "paired_across_models": true,
+  "same_donor_row_for_all_replaced_features_within_trial": true,
+  "donors_per_observation": 512,
+  "random_orders": 32,
+  "random_order_seed": 9020811,
+  "coverage_subset": "Smallest local prefix with cumulative absolute SHAP >= 90%; not interpreted as 90% prediction recovery",
+  "reconstruction_tolerance": "5% of each fitted model's population SD of predictions over its training split, with numerical floor",
+  "reconstruction_count": "Smallest k within tolerance at k and every larger k; first crossing also saved because curves may be non-monotonic",
+  "normalization": "Divide each subject curve by its mean absolute prediction change when all features are replaced",
+  "near_zero_denominator": "Undefined when denominator <= max(1e-12, 1e-6 * model training-prediction SD); raw-unit metrics retained",
+  "non_monotonicity": "No monotonic smoothing or clipping; per-subject direction-reversal steps saved and summarized",
+  "additivity": "Numerically checked for all explained rows; validation of attribution arithmetic only, not evidence that SHAP exposes the model's entire internal reasoning",
+  "replacement_assumption": "Empirical marginal/hybrid intervention without retraining. A whole donor row preserves dependence inside the replaced block, but dependence between retained and replaced blocks can still be broken.",
+  "outputs": [
+    "completeness_curves.csv",
+    "completeness_subjects.csv",
+    "completeness_summary.csv",
+    "completeness_endpoint_checks.csv",
+    "completeness_design.npz",
+    "completeness_curves.png"
+  ],
+  "source_sha256": {
+    "outputs/best_models/random_forest_best.joblib": "da88eb0d06c2c0c175ae532136a3832b5c35fda4d4dad858cbca35987bbb9457",
+    "outputs/best_models/xgboost_best.joblib": "c03d29dbf214295daf44607ff2b8cc0089cc5527df0ba94008014363c105aab2",
+    "outputs/best_models/selection_audit/local_faithfulness.npz": "aa2bff123d143278753273baba6df5f71269e978254d89b4c89df8fec1cfcd2c",
+    "outputs/best_models/selection_audit/final_rows.csv": "422a9cd74af89f4674a9c27e3c9d77806201f2e30511adebe7b286b3238b14c0"
+  }
+}

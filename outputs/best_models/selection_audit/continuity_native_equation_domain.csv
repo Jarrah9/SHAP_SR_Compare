@@ -1,0 +1,3 @@
+Noise (% training SD),Evaluated subject-perturbation rows,Finite input rows,Minimum equation denominator,Numerical singularity tolerance,Near-zero denominators,Finite PySR predictions,Maximum absolute PySR prediction
+2.5,200000,200000,0.4373398041287167,1.0006370024090532e-10,0,200000,3.616572348364158
+5.0,200000,200000,0.42644723121218586,1.0005514805913467e-10,0,200000,3.7102881776864636

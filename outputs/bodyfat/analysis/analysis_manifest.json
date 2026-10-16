@@ -1,0 +1,74 @@
+{
+  "artifact_status": "analysis_from_downloaded_hpc_results",
+  "is_mock": false,
+  "hpc_results_root": "hpc_results\\bodyfat",
+  "prepared_dir": "hpc_results\\bodyfat\\prepared",
+  "model_sources": {
+    "Random Forest": "hpc_results\\bodyfat\\random_forest_20260719_232404",
+    "XGBoost": "hpc_results\\bodyfat\\xgboost_20260719_232404",
+    "PySR": "hpc_results\\bodyfat\\pysr_20260719_232448"
+  },
+  "pysr_selection": "best_validation_rmse",
+  "feature_columns": [
+    "Age",
+    "Weight",
+    "Height",
+    "Neck",
+    "Chest",
+    "Abdomen",
+    "Hip",
+    "Thigh",
+    "Knee",
+    "Ankle",
+    "Biceps",
+    "Forearm",
+    "Wrist",
+    "ACratio",
+    "HTratio"
+  ],
+  "explanation_columns": [
+    "Age",
+    "Weight",
+    "Height",
+    "Neck",
+    "Chest",
+    "Abdomen",
+    "Hip",
+    "Thigh",
+    "Knee",
+    "Ankle",
+    "Biceps",
+    "Forearm",
+    "Wrist"
+  ],
+  "models": [
+    "Random Forest",
+    "XGBoost",
+    "PySR"
+  ],
+  "correctness_method": "Single Deletion over raw measurements with empirical training-distribution replacement and deterministic ratio recomputation; Spearman alignment with raw-feature SHAP",
+  "continuity_method": "Paired Gaussian perturbations on raw features without training-range clipping; derived ratios recomputed; SHAP cosine similarity reported for response-stable rows",
+  "response_stability_tolerance": 0.43374285217205744,
+  "noise_levels": [
+    0.0,
+    0.025,
+    0.05
+  ],
+  "noise_scale": "fraction of raw-feature training standard deviation",
+  "noise_repeats": 100,
+  "continuity_repeats": 20,
+  "noise_interval": "empirical 2.5th and 97.5th percentiles across paired draws",
+  "noise_bounds": "no clipping; non-positive anthropometric measurements rejected",
+  "deletion_repeats": 20,
+  "background_size": 50,
+  "explainer_kinds": {
+    "Random Forest": "Permutation SHAP over 13 raw measurements; ratios recomputed",
+    "XGBoost": "Permutation SHAP over 13 raw measurements; ratios recomputed",
+    "PySR": "Permutation SHAP over 13 raw measurements; ratios recomputed"
+  },
+  "versions": {
+    "scikit_learn": "1.8.0",
+    "xgboost": "3.2.0",
+    "shap": "0.51.0"
+  }
+}
